@@ -4,17 +4,29 @@ CREATE TABLE HotelChain (
 	HotelChainName VARCHAR(50),
 	CentralOffice VARCHAR(50),
 	NumberOfHotel INTEGER,
-	PhoneNumber INTEGER,
+	PhoneNumber BIGINT,
 	Email VARCHAR(50),
 	PRIMARY KEY (HotelChainName)
 ); 
+
+INSERT INTO HotelChain Values
+('Holiday Inn', '1918 Angie Drive', 8, 2029182132, 'chuppay@karbonaielite.com'),
+('Sheraton', '1721 Peaceful Lane', 8, 2053517964, 'zhenya230783@comohacer.club'),
+('Four Seasons', '2462 Tanglewood Road', 8, 5056988019, 'benox225@beanlignt.com'),
+('Hilton', '1938 Kuhl Avenue', 8, 4064791128, 'rknight1@welprems.xyz'),
+('Best Western', '295 Park Avenue', 8, 2144649827, 'jujubamantovani@kayatv.net');
+
+
+UPDATE HotelChain 
+SET hotelchainname='Best Western'
+WHERE centraloffice='295 Park Avenue';
 
 CREATE TABLE Hotel (
 	Rating INTEGER,
 	NumberOfRooms INTEGER,
 	Address VARCHAR(50),
 	Email VARCHAR(50),
-	PhoneNumber INTEGER,
+	PhoneNumber BIGINT,
 	Manager BOOLEAN,
 	PRIMARY KEY (Address)
 );
@@ -36,7 +48,8 @@ CREATE TABLE Employee (
 );
 
 CREATE TABLE Booking (
-	HotelAndRoom VARCHAR (50),
+	Hotel VARCHAR (50),
+	Room INTEGER,
 	BookingDate DATE,
 	RentingDate Date,
 	DepartureDate Date,
@@ -45,12 +58,6 @@ CREATE TABLE Booking (
 	Paid Boolean,
 	PRIMARY KEY (BookingID)
 );
-
-ALTER TABLE Booking
-RENAME COLUMN HotelAndRoom to Hotel;
-
-ALTER TABLE Booking
-ADD Room INTEGER;
 
 CREATE TABLE Rooms (
 	Price INTEGER,
@@ -63,3 +70,12 @@ CREATE TABLE Rooms (
 	Room INTEGER,
 	PRIMARY KEY (Hotel,Room)
 );
+
+
+
+
+
+
+
+
+
