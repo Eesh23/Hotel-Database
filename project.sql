@@ -71,6 +71,10 @@ CREATE TABLE Rooms (
 	PRIMARY KEY (Hotel,Room)
 );
 
+CREATE INDEX booking_date ON Booking (BookingDate, RentingDate);
+CREATE INDEX room_price ON Rooms (Price);
+CREATE INDEX hotelchain_phone ON HotelChain (PhoneNumber);
+
 
 
 
