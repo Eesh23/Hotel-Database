@@ -16,10 +16,10 @@ body {
  }
 
  .wrapper{
-    width: 400px;
+    width: 500px;
     background: transparent;
     border-radius: 10px;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 10px 10px;
 }
  select {
     -webkit-appearance:none;
