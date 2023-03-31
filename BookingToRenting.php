@@ -50,15 +50,8 @@ if ($bookingID == 0) {
   if (!$result) {
     die("Error in updating the booking.");
   }
-
   echo "Booking updated to renting successfully.";
-
-
 }
-
-
-
-// Update the booking to renting
 
 // Close the database connection
 pg_close($db);
