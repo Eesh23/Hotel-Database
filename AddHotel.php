@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Add New Hotel</h1>
-<form action="index.php" method="post">
+<form action="AddHotel.php" method="post">
     <label for="hotelName">Hotel Name:</label>
     <input type="text" id="hotelName" name="hotelName" value="BlueTree" required><br>
 
@@ -51,11 +51,5 @@
             echo "User must have sent wrong inputs\n";
         }
     }
-
-
-
-
-
-
 
 ?>
