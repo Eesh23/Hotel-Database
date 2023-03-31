@@ -126,14 +126,18 @@ CREATE TABLE Customer (
 	FullName VARCHAR (100),
 	Email VARCHAR(50),
 	SIN INTEGER,
+	Password VARCHAR(100),
+	Address VARCHAR(100),
 	PRIMARY KEY (SIN)
 );
 
 CREATE TABLE Employee (
 	FullName VARCHAR (100),
-	Positon VARCHAR(50),
+	Position VARCHAR(50),
 	Address VARCHAR(50),
 	SIN INTEGER,
+	Password VARCHAR(100),
+	Email VARCHAR(100),
 	PRIMARY KEY (SIN)
 );
 
