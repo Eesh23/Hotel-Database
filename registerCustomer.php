@@ -30,7 +30,7 @@
                     <label for="">SIN</label>
                 </div>
                 <button>
-                    <a href="Customer.html">Confirm</a>
+                    <a href="">Confirm</a>
                 </button>
             </form>
         </div>
@@ -50,6 +50,9 @@ $sin = intval($_POST['sin']);
 $date = date("Y-m-d");
 
 
+if ($sin == 0) {
+
+} else {
     $query = "INSERT INTO hoteldb.customer (registrationdate, fullname, email, sin, password,address) VALUES 
               ('$date','$name','$email','$sin','$password','$address')";
     $result = pg_query($db_connection,$query);
@@ -60,5 +63,8 @@ $date = date("Y-m-d");
     } else {
         echo "User must have sent wrong inputs\n";
     }
+
+}
+
 
 ?>

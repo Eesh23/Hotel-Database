@@ -127,7 +127,7 @@
 
 <?php
 
-
+/*
 
 // Connect to PostgreSQL database
 $host = "localhost";
@@ -148,9 +148,9 @@ $price_range_min = $_POST["price_range_min"];
 $price_range_max = $_POST["price_range_max"];
 
 // Retrieve data from the database based on user's search criteria
-$sql = "SELECT hoteldb.Hotel.*, HotelChain.HotelChainName 
-        FROM Hotel 
-        INNER JOIN HotelChain ON Hotel.HotelName = HotelChain.HotelChainName 
+$sql = "SELECT hoteldb.hotel.*, hoteldb.hotelchain.hotelchainname 
+        FROM hoteldb.hotel 
+        INNER JOIN hoteldb.hotelchain ON hoteldb.hotel.hotelname = hoteldb.hotelchain.hotelchainname 
         WHERE 
             (Hotel.Rating >= :hotel_category OR :hotel_category IS NULL) AND 
             (Hotel.NumberOfRooms >= :total_rooms OR :total_rooms IS NULL) AND 
@@ -189,6 +189,6 @@ as $row) {
     echo "<td>" . $row['Email'] . "</td>";
     echo "<td>" . $row['Manager'] . "</td>";
 }
-
+*/
 
 ?>
