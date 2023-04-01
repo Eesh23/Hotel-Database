@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add New Hotel</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Convert Booking to Renting</title>
 </head>
 <body>
-<h1>Add New Hotel</h1>
-<form action="AddHotel.php" method="post">
-    <label for="hotelName">Hotel Name:</label>
-    <input type="text" id="hotelName" name="hotelName" value="BlueTree" required><br>
+  <section>
+    <div class="form-value">
+        <h1>Add New Hotel</h1>
+        <form action="AddHotel.php" method="post">
+            <label for="hotelName">Hotel Name:</label>
+            <input type="text" id="hotelName" name="hotelName" value="BlueTree" required><br>
+        
+            <label for="centralOffice">Central Office:</label>
+            <input type="text" id="centralOffice" name="centralOffice" value="353 Central Ave" required><br>
+        
+            <label for="numOfHotels">Number of Hotels:</label>
+            <input type="number" id="numOfHotels" name="numOfHotels" value="5" required><br>
+        
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" value="3435756203" required><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="bluetree@corporate.com"required><br>
+        
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+  </section>
 
-    <label for="centralOffice">Central Office:</label>
-    <input type="text" id="centralOffice" name="centralOffice" value="353 Central Ave" required><br>
-
-    <label for="numOfHotels">Number of Hotels:</label>
-    <input type="number" id="numOfHotels" name="numOfHotels" value="5" required><br>
-
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="tel" id="phoneNumber" name="phoneNumber" value="3435756203" required><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" value="bluetree@corporate.com"required><br>
-
-    <input type="submit" value="Submit">
-</form>
 </body>
 </html>
 

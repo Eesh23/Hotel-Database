@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Create Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Convert Booking to Renting</title>
 </head>
 <body>
-	<h1>Create Booking</h1>
-	<form action="" method="POST">
-		<label for="hotel">Hotel:</label>
-		<input type="text" id="hotel" name="hotel"><br>
+  <section>
+    <div class="form-value">
+        <h1>Create Booking</h1>
+        <form action="" method="POST">
+            <label for="hotel">Hotel:</label>
+            <input type="text" id="hotel" name="hotel"><br>
 
-		<label for="room">Room Number:</label>
-		<input type="number" id="room" name="room"><br>
+            <label for="room">Room Number:</label>
+            <input type="number" id="room" name="room"><br>
 
-		<label for="booking_date">Checkin Date:</label>
-		<input type="date" id="booking_date" name="booking_date"><br>
+            <label for="booking_date">Checkin Date:</label>
+            <input type="date" id="booking_date" name="booking_date"><br>
 
-		<label for="departure_date">Departure Date:</label>
-		<input type="date" id="departure_date" name="departure_date"><br>
+            <label for="departure_date">Departure Date:</label>
+            <input type="date" id="departure_date" name="departure_date"><br>
 
 
 
-		<input type="submit" value="Create Booking">
-	</form>
+            <input type="submit" value="Create Booking">
+        </form>
+    </div>
+  </section>
+
 </body>
 </html>
 
