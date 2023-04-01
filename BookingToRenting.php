@@ -19,6 +19,7 @@
   <input type="text" id="roomNumber" name="roomNumber"><br><br>
   <input type="submit" value="Convert Booking to Renting">
 </form>
+
 </body>
 </html>
 
@@ -30,20 +31,39 @@ if (!$db) {
   die("Error in connecting to database.");
 }
 
+$result = pg_query($db, "SELECT * FROM hoteldb.booking");
+
+// Check if the query was successful
+if (!$result) {
+  echo "Failed to retrieve bookings.";
+  exit;
+}
+
+echo "<h1>List of All Bookings</h1>";
+// Print out all the bookings
+while ($row = pg_fetch_assoc($result)) {
+  echo "Hotel: " . $row['hotel'] . "<br>";
+  echo "Room: " . $row['room'] . "<br>";
+  echo "BookingDate: " . $row['bookingdate'] . "<br>";
+  echo "RentingDate: " . $row['rentingdate'] . "<br>";
+  echo "DepartureDate: " . $row['departuredate'] . "<br>";
+  echo "Status: " . $row['status'] . "<br>";
+  echo "BookingID: " . $row['bookingid'] . "<br>";
+  echo "Paid: " . $row['paid'] . "<br><br>";
+}
+
 // Define the variables
-$hotel = $_POST['hotel'];
 $room = intval($_POST['roomNumber']);
-$bookingDate = $_POST['checkinDate'];
-$rentingDate = date("Y-m-d");
+$rentingDate = $_POST['checkinDate'];
+$bookingDate = date("Y-m-d");
 $departureDate = $_POST['checkoutDate'];
-$status = true;
 $bookingID = intval($_POST['bookingID']);
-$paid = true;
+
 
 if ($bookingID == 0) {
 
 } else {
-  $sql = "UPDATE hoteldb.booking SET RentingDate='$rentingDate', DepartureDate='$departureDate', Status=$status, Paid=$paid WHERE BookingID=$bookingID";
+  $sql = "UPDATE hoteldb.booking SET rentingdate='$rentingDate', departuredate='$departureDate', status=true, paid=true, room='$room' WHERE bookingid='$bookingID'";
 
   $result = pg_query($db, $sql);
 
@@ -51,6 +71,7 @@ if ($bookingID == 0) {
     die("Error in updating the booking.");
   }
   echo "Booking updated to renting successfully.";
+  header("refresh: 1");
 }
 
 // Close the database connection
