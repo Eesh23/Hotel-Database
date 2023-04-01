@@ -83,6 +83,16 @@
             <input type="range" class="range-min" min="0" max="1500" value="100">
             <input type="range" class="range-max" min="0" max="1500" value="1500">
         </div>
+        <div class="wrapper">
+            <h1>Make a Booking</h1>
+            <div class="form-value">
+                <form action="">
+                    <button>
+                        <a href="Booking.php">BOOKING</a>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script>
